@@ -9,8 +9,9 @@ import java.net.URL;
 public class Resources {
     public static BufferedImage welcome, iconimage;
     public static void load(){
-        welcome = loadImage("welcome.png");
+        welcome = loadImage("C:\\Users\\KaneP\\Desktop\\repos\\SimpleJavaGDF\\src\\resources\\welcome.png");
         iconimage = loadImage("iconimage.png");
+
 
     }
     private static AudioClip loadSound(String filename){
@@ -21,7 +22,7 @@ public class Resources {
     private static BufferedImage loadImage(String filename){
         BufferedImage img = null;
         try {
-            img = ImageIO.read(Resources.class.getResourceAsStream("/resources/" + filename));
+            img = ImageIO.read(Resources.class.getResourceAsStream("src/resources/" + filename));
 
         }catch (Exception e){
             System.out.println("error while reading"+ filename);
