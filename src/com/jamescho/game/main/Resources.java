@@ -9,20 +9,20 @@ import java.net.URL;
 public class Resources {
     public static BufferedImage welcome, iconimage;
     public static void load(){
-        welcome = loadImage("C:\\Users\\KaneP\\Desktop\\repos\\SimpleJavaGDF\\src\\resources\\welcome.png");
+        welcome = loadImage("welcome.png");
         iconimage = loadImage("iconimage.png");
 
 
     }
     private static AudioClip loadSound(String filename){
-        URL fileURL = Resources.class.getResource("/resources/" + filename);
+        URL fileURL = Resources.class.getResource("/Resources/" + filename);
         return Applet.newAudioClip(fileURL);
 
     }
     private static BufferedImage loadImage(String filename){
         BufferedImage img = null;
         try {
-            img = ImageIO.read(Resources.class.getResourceAsStream("src/resources/" + filename));
+            img = ImageIO.read(Resources.class.getResourceAsStream("/Resources/" + filename));
 
         }catch (Exception e){
             System.out.println("error while reading"+ filename);

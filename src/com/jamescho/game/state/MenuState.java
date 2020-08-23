@@ -6,35 +6,39 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
-public class LoadState extends State {
+public class MenuState extends State {
     @Override
     public void init() {
-        Resources.load();
-        System.out.println("resources loaded");
+        System.out.println("Entered MainState");
+
     }
 
     @Override
     public void update() {
-    setCurrentState(new MenuState());
+
     }
 
     @Override
     public void render(Graphics g) {
+        g.drawImage(Resources.welcome,0,0,null);
 
     }
 
     @Override
     public void onClick(MouseEvent e) {
+        System.out.println("mouse press");
 
     }
 
     @Override
     public void onKeyPress(KeyEvent e) {
+        System.out.println("key pressed");
 
     }
 
     @Override
     public void onKeyRelease(KeyEvent e) {
+        System.out.println("key release");
 
     }
 }
